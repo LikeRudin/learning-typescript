@@ -25,12 +25,12 @@ const findIndex: FindIndex = (arr, x) => {
 
 
 /**
- *   don't use any on param typ
+ *   don't use any on param type
  * 
  * 1. in FindIndex, x's type maybe not one of types in arr
  * but it doesn't matter.
  * 
- * T automatically define types including x 
+ * T automatically defines type for array including x 
  * 
  * const a = findIndex([true,1,"7"], null);
  * 

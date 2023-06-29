@@ -8,7 +8,9 @@
 
 generics creation is useful to make code for some libraries, packages code
 
-but normal developer - who usually don't create libraries ,but use
+but normal developer - who usually don't create libraries ,but use libraries
+
+don't need to write many generics
 
 ## 2. use generics
 
@@ -27,8 +29,8 @@ const handleArray: HandleArray = (arr) => arr[0] ;
 by giving generic at function
 
 ```
-
 // i don't know the reason why , is needed in bracket.
+
 const handleArray = <T,>(a: T[]) => a[0];
 
 const a = handleArray([1, 2, 3]);
@@ -43,7 +45,7 @@ const c = handleArray<boolean>([1, 2])
 
 <br>
 
-### giving generic type to property
+### declare generic type property
 
 ```
 
@@ -64,7 +66,7 @@ const nico: FoodFighter = {
     }
 }
 
-// we can seperate type in generic for FoodFighter
+// we can seperate type from generic in FoodFighter
 
 type FoodFighterExtraInfo = {
     favFood: string

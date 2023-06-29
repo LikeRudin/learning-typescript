@@ -14,7 +14,8 @@
 
 <br>
 
-poly: multi
+poly: multi-
+
 morpho: form, structure
 
 <br>
@@ -23,7 +24,7 @@ morpho: form, structure
 
 <br>
 
-having different form with one-name
+state has different forms with one-name
 
 <br>
 
@@ -33,9 +34,9 @@ having different form with one-name
 
 ### reason to use generic
 
-evade the repeating the declare types.
+to evade the repeating the declare types.
 
-by using generics we can define various types of call siganature with one line
+by using generics, we can define various types of call siganature with one line
 
 <br>
 
@@ -43,7 +44,7 @@ by using generics we can define various types of call siganature with one line
 
 <br>
 
-this code is type for function takes single-type array
+function takes single-type array
 
 ```
 type HandleArray = {
@@ -65,11 +66,16 @@ handleArray(["1", "2", "3"]);
 ```
 
 if we want to create function for specific type of array,
+
 we must manually append concrete-type call siganture at type HandleArray
 
 it is waste of labor and time
 
 generic is simple way to implement polymorphism of function
+
+<br>
+
+example code: generics automatically made types for each call
 
 ```
 type HandleArray = {

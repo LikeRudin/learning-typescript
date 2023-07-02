@@ -1,6 +1,6 @@
 
 type Last = <T>(arr: T[]) => T;
-const last = (arr: any[]) => arr[arr.length - 1];
+const last = (arr) => arr[arr.length - 1];
 
 
 type Prepend = <T, V>(arr: T[], item: V) => (T | V)[];
@@ -43,7 +43,7 @@ const findIndex: FindIndex = (arr, x) => {
  * 
  * 
  * 2. if the return type is mixture of two array
- * then just use type intersection
+ * then just use type union type
  * 
  * type Prepend = <T, V>(arr: T[], item: V) => (T | V)[];
  */

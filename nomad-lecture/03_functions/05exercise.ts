@@ -44,3 +44,39 @@ const findIndex: FindIndex = (arr, x) => {
  *
  * type Prepend = <T, V>(arr: T[], item: V) => (T | V)[];
  */
+
+const last = <T>(arr: T[]): T | undefined => (arr.length === 0 ? undefined : arr[arr.length - 1]);
+
+const prepend = <T,V>(arr: T[], item: V):(T|V)[] => [item, ...arr];
+
+const mix = <T,V>(array1: T[], array2:V[]): (T|V)[] =>{
+    const mergedArray = [...array1, ...array2];
+    
+    for (let i = 0; i < mergedArray.length ;i++){
+        const randomIndex = Math.floor(Math.random() * mergedArray.length);
+        [mergedArray[i], mergedArray[randomIndex]] = [mergedArray[randomIndex], mergedArray[i]];
+        }
+    
+    return mergedArray;
+}
+
+const count = <T>(arr:T[]):number => arr.length;
+
+const findindex = <T>(arr:T[], item:T): number | null =>{
+    for (let i = 0; i< arr.length; i++){
+        if (arr[i] === item){
+            return i
+        }
+    }
+    return null;
+}
+
+const slice = <T>(arr:T[], startIndex: number, endIndex = arr.length): T[] => {
+    const result: T[] = [];
+    for (let i = startIndex; i < endIndex; i++){
+        result.push(arr[i])
+    }
+    return result;
+}
+
+
